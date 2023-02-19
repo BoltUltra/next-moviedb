@@ -1,0 +1,9 @@
+BaseURL: https://api.themoviedb.org/3/trending/movie/day?api_key=
+api_key: 3d16c511eb1d13db73e0aca6a13d3365
+Image BaseURL: https://image.tmdb.org/t/p/original/
+Trending Tv Series: https://api.themoviedb.org/3/trending/tv/day?api_key=3d16c511eb1d13db73e0aca6a13d3365
+Trending Movies: https://api.themoviedb.org/3/trending/movie/day?api_key=3d16c511eb1d13db73e0aca6a13d3365
+Movie Providers: https://api.themoviedb.org/3/watch/providers/movie?api_key=3d16c511eb1d13db73e0aca6a13d3365&language=en-US
+
+Richardbraimoh@gmail.com256
+

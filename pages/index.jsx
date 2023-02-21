@@ -35,7 +35,7 @@ const Home = ({ movies }) => {
         <Navbar />
         <div>
           <div className="md:mt-4 mt-5 space-y-3 md:mr-96">
-            <h3 className="font-bold text-white text-5xl uppercase ">
+            <h3 className="font-bold text-white md:text-5xl text-3xl uppercase ">
               {movies[currentMovieIndex].title}
             </h3>
             <p className="title font-light">

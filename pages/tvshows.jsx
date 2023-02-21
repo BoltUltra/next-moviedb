@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Navbar } from "../components";
 import { Calendar, Star1 } from "iconsax-react";
 import "swiper/css";
@@ -7,14 +7,10 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Tvshows = ({ tvshows }) => {
-  const maxLength = 10;
   const imageBaseURL = "https://image.tmdb.org/t/p/original/";
   const posterUrl = "https://image.tmdb.org/t/p/w500/";
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
-
-  // setBackgroundImg(imageBaseURL + tvshows[currentMovieIndex].backdrop_path);
   const backgroundImg = imageBaseURL + tvshows[currentMovieIndex].backdrop_path;
-
   const handleMovieClick = (index) => {
     setCurrentMovieIndex(index);
   };
@@ -22,7 +18,9 @@ const Tvshows = ({ tvshows }) => {
   return (
     <div
       className="app h-screen text-white font-oswald"
-      style={{ backgroundImage: `url(${backgroundImg})` }}
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${backgroundImg})`,
+      }}
     >
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -33,7 +31,6 @@ const Tvshows = ({ tvshows }) => {
           rel="stylesheet"
         />
       </Head>
-      {/* <div className="overlay h-screen w-full absolute z-[10]"></div> */}
       <div className="md:px-32 px-5">
         <Navbar />
         <div>
@@ -42,10 +39,7 @@ const Tvshows = ({ tvshows }) => {
               {tvshows[currentMovieIndex].name}
             </h3>
             <p className="title font-light">
-              {tvshows[currentMovieIndex].overview > maxLength
-                ? tvshows[currentMovieIndex].overview.slice(0, maxLength) +
-                  "..."
-                : tvshows[currentMovieIndex].overview}
+              {tvshows[currentMovieIndex].overview}
             </p>
             <div className="flex items-center space-x-10">
               <p className="flex items-center space-x-3 font-light">

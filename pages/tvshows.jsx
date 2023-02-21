@@ -59,7 +59,7 @@ const Tvshows = ({ tvshows }) => {
             </div>
           </div>
 
-          <div className="bg-white bg-opacity-20 md:mt-10 mt-5 md:p-5 p-2">
+          <div className="bg-white bg-opacity-20 md:mt-10 mt-20 md:p-5 p-2">
             <Swiper
               slidesPerView={2}
               spaceBetween={7}
@@ -68,7 +68,7 @@ const Tvshows = ({ tvshows }) => {
               }}
               breakpoints={{
                 640: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                   spaceBetween: 20,
                 },
                 768: {
@@ -89,7 +89,7 @@ const Tvshows = ({ tvshows }) => {
                       src={posterUrl + tvshow.poster_path}
                       alt={tvshow.title}
                       title={tvshow.title}
-                      className="rounded-md md:w-auto cursor-pointer border border-transparent hover:border-2 hover:border-gray-400 transition duration-300 hover:-translate-y-2"
+                      className="rounded-md h-full md:w-auto cursor-pointer border border-transparent hover:border-2 hover:border-gray-400 transition duration-300 hover:-translate-y-2"
                     />
                   </div>
                 </SwiperSlide>
